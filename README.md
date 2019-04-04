@@ -1,29 +1,32 @@
-![vue-ui user interface](media/logo.png)
-
 # Prevue
 
-This extension is used for previewing components while styling them in their default state.
+A Visual Studio Code extension used for previewing local Storybook Vue components inside a separate tab. 
+
+<p align="center">
+  <img src="media/logo.png">
+</p>
+
+
+
+
 
 ## Requirements
 
-- A running [Storybook](https://github.com/storybooks/storybook) server
-- A story named **__default** for *every component* you would like to preview
+- A running **[Storybook](https://github.com/storybooks/storybook)** local server
+- A story named `__default` for **every component** you would like to preview
 
-## Extension Settings
+## Settings
 
-* `componentPreview.prevue`: open preview window
+* `prevue.storybookPort`: set local Storybook server port *(default: 6006)*
 
-## Extension Commands
+## Commands
 
-* `componentPreview.prevue`: opens/shows the preview window
+* `prevue.prevue`: opens/shows the preview window
 
-## Extension Shortcuts
+## Shortcuts
 
 * `Ctrl + Shift + P`: opens/shows the preview window (all platforms)
 
-## Known Issues
-
-Extension currently only supports SFC *.vue* files.
 
 ## Release Notes
 
