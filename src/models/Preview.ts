@@ -88,7 +88,7 @@ export class Preview {
                             background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
                     }
                 </style>
-                <iframe class="preview" src="http://${config.storybookHost}:${
+                <iframe class="preview" src="http://localhost:${
             config.storybookPort
             }/iframe.html?id=${title
                 .replace(/[\W_]+/g, "-")
