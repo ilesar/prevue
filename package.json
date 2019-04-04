@@ -1,8 +1,9 @@
 {
 	"name": "prevue",
 	"displayName": "Prevue",
-	"description": "Previews your Vue component in the IDE",
+	"description": "Previews your Storybook Vue component in the IDE",
 	"publisher": "local",
+	"author": "Ivan Lesar <ivan.lesar.pmf@gmail.com> (https://github.com/ilesar)",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.32.0"
@@ -13,6 +14,11 @@
 	"activationEvents": [
 		"onCommand:prevue.show"
 	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ilesar/prevue"
+	},
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
@@ -31,21 +37,13 @@
 		],
 		"configuration": {
 			"properties": {
-				"prevue.storybookHost": {
-					"type": [
-						"string",
-						"null"
-					],
-					"default": "localhost",
-					"description": "Specifies the port of the storybook webpack server path containing the tsserver and lib*.d.ts files to use."
-				},
 				"prevue.storybookPort": {
 					"type": [
 						"number",
 						"null"
 					],
 					"default": 6006,
-					"description": "Specifies the port of the storybook webpack server path containing the tsserver and lib*.d.ts files to use."
+					"description": "Specifies the port of the Storybook server used for preview."
 				}
 			}
 		}
