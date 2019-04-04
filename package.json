@@ -1,0 +1,67 @@
+{
+	"name": "prevue",
+	"displayName": "Prevue",
+	"description": "Previews your Vue component in the IDE",
+	"publisher": "local",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:prevue.show"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "prevue.show",
+				"title": "Prevue"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "prevue.show",
+				"key": "ctrl+shift+p",
+				"mac": "ctrl+shift+p",
+				"when": "editorTextFocus"
+			}
+		],
+		"configuration": {
+			"properties": {
+				"prevue.storybookHost": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": "localhost",
+					"description": "Specifies the port of the storybook webpack server path containing the tsserver and lib*.d.ts files to use."
+				},
+				"prevue.storybookPort": {
+					"type": [
+						"number",
+						"null"
+					],
+					"default": 6006,
+					"description": "Specifies the port of the storybook webpack server path containing the tsserver and lib*.d.ts files to use."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	}
+}
